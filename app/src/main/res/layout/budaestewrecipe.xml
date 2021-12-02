@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="71dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식 레시피" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식과 어울리는 추천 음료" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/goto_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/goto_home" />
+
+            <ImageView
+                android:id="@+id/budaestew"
+                android:layout_width="wrap_content"
+                android:layout_height="325dp"
+                app:srcCompat="@drawable/budaestew" />
+
+            <ImageButton
+                android:id="@+id/bookmark_add"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="280dp"
+                app:srcCompat="@drawable/bookmark_add" />
+
+            <TextView
+                android:id="@+id/budaestewrecipe"
+                android:layout_width="369dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="330dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="부대찌개\n\n재료 : 스팸 + 소시지 + 돼지 다짐육(24750 / 17 = 1455원), 베이키드 빈스(150원), 양배추(300원), 마늘(100원), 대파(100원), 사골곰탕(1100원)
+                \n총 합 : 약 3,300원
+                \n\n1. 스팸, 소시지는 먹기 좋은 크기로 썰어준다.
+                \n2. 양배추는 큼직하게 썰고, 마늘은 다지고, 대파는 반 갈라서 크게 썰어준다.
+                \n3. 냄비에 양배추, 다진 마늘, 대파를 넣고 스팸, 소시지, 베이키드 빈스를 넣어 준다.
+                \n4. 육수(물)를 800ml정도 넣고 끓여준다.
+                \n5. 한번 끓어오르면 고춧가루, 후추를 넣고 푹 끓여준다.
+                \n6. 마지막 간을 보고 소금으로 간은 맞춰 주면 완성이다."
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/mart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="280dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="가까운 마트 찾기"
+                android:textSize="12sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/soju"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_marginTop="50dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/soju" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:padding="20dp"
+                android:text="[소주]\n\n소주는 대한민국의 술이자 증류주의 한 종류다.과거에는 소주라고 하면 당연히 증류식 소주를 의미했지만 현대에 들어서는 녹색병으로 대표되는 희석식 소주가 대중적으로 자리 잡아버렸고 오히려 오리지널 소주를 전통 소주, 증류식 소주 등으로 부른다. 부대찌개의 칼칼한 국물과 안에 들어있는 라면과 각종 햄들이 주는 감칠맛은 깔끔한 소주와 함께 만날 때 더 빛이 난다."
+                android:textColor="#000000"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>

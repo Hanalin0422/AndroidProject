@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="71dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식 레시피" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식과 어울리는 추천 음료" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/goto_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/goto_home" />
+
+            <ImageView
+                android:id="@+id/meatball"
+                android:layout_width="wrap_content"
+                android:layout_height="325dp"
+                app:srcCompat="@drawable/meatball" />
+
+            <ImageButton
+                android:id="@+id/bookmark_add"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="280dp"
+                app:srcCompat="@drawable/bookmark_add" />
+
+            <TextView
+                android:id="@+id/meatballrecipe"
+                android:layout_width="369dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="320dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="미트볼무슈\n\n재료 : 3분 오뚜기 미트볼 (약 2000원), 식빵 3장 (800원), 이태리안 피자치즈 1팩 (750원), 슬라이스 치즈(500원)
+                        \n총 합 : 4,250원
+
+                        \n\n1. 식빵은 팬에 살짝 구워서 수분을 없애준다.
+                        \n2. 슬라이스 치즈를 삼각형으로 잘라서 빵위에 올려준다.
+                        \n3. 미트볼은 반으로 잘라서 올려주고 소스도 치즈위에 올려준다.
+                        \n4. 피자치즈를 미트볼위에 올려준다.
+                        \n5. 재료가 다 들어가면 3단으로 쌓아서 올려서 눌러주고 렌지에 2분정도 돌려서 치즈를 녹여준다.
+                        \n6. 계란은 소금간을 해주고 풀어준다.
+                        \n7. 빵을 삼각형 모양으로 잘라서 계란 옷을 입혀 준다.
+                        \n8. 기름 두른 팬에 빵을 구워주면 완성이다."
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/mart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="280dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="가까운 마트 찾기"
+                android:textSize="12sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/americano"
+                        android:layout_width="match_parent"
+                        android:layout_height="257dp"
+                        android:layout_marginTop="50dp"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/americano" />
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/nanumbarunpen_b"
+                        android:padding="20dp"
+                        android:text="[아메리카노]\n\n정식 명칭은 Caffé Americano이다. 단어를 해석하자면 '미국식 커피'로, 말 그대로 '유럽식 커피에 비해 옅은 농도인 미국식 커피 스타일'을 일컫는 말이다. 유래는 불분명하며, 제2차 세계대전 중 이탈리아에 점령군으로 진주한 미군이 마시기 좋도록 에스프레소를 희석한 것이라는 설에 무게가 실리지만 정확한 기원은 불분명하다. 자칫 느끼하게 느껴지거나 무겁게 느껴질 수 있는 미트볼무슈를 아메리카노와 마시고 있으면 끝맛이 깔끔해지면서 힘이 솟아오를 것이다."
+                        android:textColor="#000000"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </ScrollView>
+
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>
