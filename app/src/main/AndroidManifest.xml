@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seoultech.foodrecipes">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -48,6 +52,7 @@
         <activity android:name=".red_bulgogiRecipe"></activity>
         <activity android:name=".kimchi_fried_rice"></activity>
         <activity android:name=".kimchi_fried_riceRecipe"></activity>
+        <meta-data android:name="com.kakao.sdk.Appkey" android:value="a58d41ff8acb47e18843083723d91da7"/>
     </application>
 
 </manifest>

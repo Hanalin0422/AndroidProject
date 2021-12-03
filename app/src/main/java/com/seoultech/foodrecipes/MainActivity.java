@@ -3,7 +3,12 @@ package com.seoultech.foodrecipes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -13,6 +18,8 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import java.io.Serializable;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,24 +31,38 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final CheckBox cabbage = (CheckBox)findViewById(R.id.cabbage);
-        final CheckBox egg = (CheckBox)findViewById(R.id.egg);
-        final CheckBox sesame = (CheckBox)findViewById(R.id.sesame);
-        final CheckBox kimchi = (CheckBox)findViewById(R.id.kimchi);
-        final CheckBox pork = (CheckBox)findViewById(R.id.pork);
-        final CheckBox milk = (CheckBox)findViewById(R.id.milk);
-        final CheckBox carrot = (CheckBox)findViewById(R.id.carrot);
-        final CheckBox mushroom = (CheckBox)findViewById(R.id.mushroom);
-        final CheckBox pumpkin = (CheckBox)findViewById(R.id.pumpkin);
-        final CheckBox cucumber = (CheckBox)findViewById(R.id.cucumber);
-        final CheckBox no = (CheckBox)findViewById(R.id.no);
+        final CheckBox cabbage = (CheckBox) findViewById(R.id.cabbage);
+        final CheckBox egg = (CheckBox) findViewById(R.id.egg);
+        final CheckBox sesame = (CheckBox) findViewById(R.id.sesame);
+        final CheckBox kimchi = (CheckBox) findViewById(R.id.kimchi);
+        final CheckBox pork = (CheckBox) findViewById(R.id.pork);
+        final CheckBox milk = (CheckBox) findViewById(R.id.milk);
+        final CheckBox carrot = (CheckBox) findViewById(R.id.carrot);
+        final CheckBox mushroom = (CheckBox) findViewById(R.id.mushroom);
+        final CheckBox pumpkin = (CheckBox) findViewById(R.id.pumpkin);
+        final CheckBox cucumber = (CheckBox) findViewById(R.id.cucumber);
+        final CheckBox no = (CheckBox) findViewById(R.id.no);
 
-        final Button noEatSubmit = (Button)findViewById(R.id.noEatSubmit);
-        viewStored = (ImageButton)findViewById(R.id.viewStored);
+        final Button noEatSubmit = (Button) findViewById(R.id.noEatSubmit);
+        viewStored = (ImageButton) findViewById(R.id.viewStored);
 
         final ArrayList<String> postData = new ArrayList<String>(10);
 
         Intent intent = getIntent();
+
+        try {
+            PackageInfo info = getPackageManager().getPackageInfo("com.seoultech.foodrecipes", PackageManager.GET_SIGNATURES);
+            for (Signature signature : info.signatures) {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+
 
         cabbage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
