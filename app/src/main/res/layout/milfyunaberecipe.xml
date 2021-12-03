@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="71dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식 레시피" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식과 어울리는 추천 음료" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/goto_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/goto_home" />
+
+                    <ImageView
+                        android:id="@+id/milfyunabe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="325dp"
+                        app:srcCompat="@drawable/milfyunabe" />
+
+                    <ImageButton
+                        android:id="@+id/bookmark_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="350dp"
+                        android:layout_marginTop="280dp"
+                        app:srcCompat="@drawable/bookmark_add" />
+
+                    <Button
+                        android:id="@+id/mart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="280dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/nanumbarunpen_b"
+                        android:text="가까운 마트 찾기"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/milfyunaberecipe"
+                        android:layout_width="369dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="330dp"
+                        android:fontFamily="@font/nanumbarunpen_b"
+                        android:paddingBottom="20dp"
+                        android:text="밀푀유나베\n\n재료 : 불고기용 또는 샤브샤브용 소고기 600g, 알배기 배추 10장, 깻잎 15장, 버섯 조금, 숙주 2줌
+                        \n육수 : 멸치 조금, 다시마 조금, 양파 1/2개, 무 조금, 물 8컵
+                        \n찍어먹는 소스 : 간장 2스푼, 식초 2스푼, 설탕 1스푼, 물 1스푼
+
+                        \n\n1. 물과 육수낼 재료들을 냄비에 함께 넣고 끓인다.
+                        \n2. 냄비에 물이 끓으면 다시마는 빼고 10분 정도 우려준다.
+                        \n3. 그 후 간장 2스푼 넣고 육수낸 재료를 걸러준다.
+                        \n4. 육수에 들어갈 고기를 쌀 것이다.
+                        \n5. 순서는 배추 -> 깻잎 -> 고기 순서대로 쌓아주면 된다.
+                        \n6. 5층 정도 쌓아준뒤 마지막에는 배추가 올라가게 해준다.
+                        \n7. 자를때는 뒤집어서 냄비 높이에 맞춰 잘라준다.
+                        \n8. 잘라준 고기와 배추를 육수가 담긴 냄비 안에 차곡차곡 담아주고 가운데에는 버섯을 넣어준다.
+                        \n9. 양파는 슬라이스한 후 찬물에 담궈 매운기를 빼서 준비해준다.
+                        \n10. 찍어먹는 소스를 분량대로 만들고 준비한 양파를 넣어준다.
+                        \n11. 잘 끓여서 익으면 소스에 찍어서 먹으면 된다."
+                        android:textColor="#000000" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/tansans"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_marginTop="50dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/tansans" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="300dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="탄산수"
+                android:textSize="36sp"
+                android:textColor="#000000"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>

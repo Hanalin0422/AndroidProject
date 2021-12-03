@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="71dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식 레시피" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식과 어울리는 추천 음료" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/goto_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/goto_home" />
+
+                    <ImageView
+                        android:id="@+id/gambas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="325dp"
+                        app:srcCompat="@drawable/gambas" />
+
+                    <ImageButton
+                        android:id="@+id/bookmark_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="350dp"
+                        android:layout_marginTop="280dp"
+                        app:srcCompat="@drawable/bookmark_add" />
+
+                    <Button
+                        android:id="@+id/mart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="280dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/nanumbarunpen_b"
+                        android:text="가까운 마트 찾기"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/gambasrecipe"
+                        android:layout_width="369dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="330dp"
+                        android:fontFamily="@font/nanumbarunpen_b"
+                        android:paddingBottom="20dp"
+                        android:text="감바스\n\n재료 : 칵테일 새우 15마리, 깐마늘 10~15알, 페퍼론치노 3개, 소금 약간 후춧가루 약간, 파슬리 약간, 올리브유 넉넉히, 바게트빵 6개
+                \n\n1. 냉동된 칵테일 새우를 물에 씻은 후 키친타올에 올려 물기를 꼭 짜준다.
+                \n2. 물기를 짠 새우에 후추와 소금을 뿌려 밑간을 해준다.
+                \n3. 마늘을 깨끗이 씻고 꽁지부분을 잘라낸 후, 편으로 썰어준다. 이때 너무 얇게 자르지 말고 3등분 정도해주면 마늘의 식감이 살아서 좋다.
+                \n4. 프라이팬에 마늘이 잠긴 정도로 올리브유를 넉넉히 둘러준 후 썰어준 마늘을 넣어준다.
+                \n5. 불을 켜고 마늘을 튀기듯 끓여준다.
+                \n6. 마늘이 노릇해 질때까지 잘 저어준다.
+                \n7. 마늘이 노릇해지면 페퍼론치노 혹은 매운맛고추를 넣어주고 조금 더 볶아준다.
+                \n8. 밑간을 한 새우를 넣어주고 새우가 잘 익도록 뒤집어 준다. 새우가 익으면 후추를 조금 더 넣고 간을 본뒤 싱겁다면 소금 간을 추가해주면 된다.
+                \n9. 페퍼론치노를 뿌리고 바게트빵을 올려주면 완성이다."
+                        android:textColor="#000000" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/tansans"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_marginTop="50dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/tansans" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="300dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="탄산수"
+                android:textSize="36sp"
+                android:textColor="#000000"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="71dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식 레시피" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식과 어울리는 추천 음료" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frame1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/goto_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/goto_home" />
+
+                    <ImageView
+                        android:id="@+id/chickennugget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="325dp"
+                        app:srcCompat="@drawable/chickennugget" />
+
+                    <ImageButton
+                        android:id="@+id/bookmark_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="53dp"
+                        android:layout_marginLeft="350dp"
+                        android:layout_marginTop="280dp"
+                        app:srcCompat="@drawable/bookmark_add" />
+
+                    <Button
+                        android:id="@+id/mart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="250dp"
+                        android:layout_marginTop="280dp"
+                        android:background="@drawable/button"
+                        android:fontFamily="@font/nanumbarunpen_b"
+                        android:text="가까운 마트 찾기"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/chickennuggetrecipe"
+                        android:layout_width="369dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="330dp"
+                        android:fontFamily="@font/nanumbarunpen_b"
+                        android:paddingBottom="20dp"
+                        android:text="닭똥집 볶음\n\n재료 : 닭똥집 250g(2250원), 양파(800원), 마늘(1000원), 피망 1개(700원)
+                        \n총 합 : 4,750원
+                        \n\n1. 마늘은 꽁다리를 제거하고 물로 씻은 다음 물기를 제거해준다.
+                        \n2. 양파는 큼직하게 썰고, 피망은 씨를 제거하고 큼직하게 썰어준다.
+                        \n3. 똥집은 한번 씻어서 물기를 제거한 다음 4등분으로 썰어준다.
+                        \n4. 소금으로 살짝 간을 한 똥집을 기름을 넉넉히 두른 팬에 넣고 볶아준다.
+                        \n5. 중간에 수분을 한번 제거하고 기름을 추가해서 후추를 넣고 더 볶아준다.
+                        \n6. 마늘을 넣고 같이 볶아준다.
+                        \n7. 마늘이 반 익으면 양파, 피망을 넣고 볶아준다.
+                        \n8. 소금, 후추로 간을 해준다.
+                        \n9. 철판에 기름을 두르고 팽이버섯을 익혀준다.
+                        \n10. 똥집을 철판에 올려주면 완성이다."
+                        android:textColor="#000000" />
+
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/tansans"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_marginTop="50dp"
+                android:visibility="invisible"
+                app:srcCompat="@drawable/tansans" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="300dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="탄산수"
+                android:textSize="36sp"
+                android:textColor="#000000"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>
