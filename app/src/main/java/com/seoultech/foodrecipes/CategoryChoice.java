@@ -329,6 +329,7 @@ public class CategoryChoice extends AppCompatActivity {
                             break;
                     }
                 }
+
             }
         });
     }
