@@ -36,7 +36,7 @@ public class marbledRecipe extends AppCompatActivity {
         bookmark_add = (ImageButton)findViewById(R.id.bookmark_add);
         mart = (Button)findViewById(R.id.mart);
         text = (TextView)findViewById(R.id.text1);
-        imageView = (ImageView)findViewById(R.id.tansans);
+        imageView = (ImageView)findViewById(R.id.bokbunja);
 
 
         Intent intent = getIntent();

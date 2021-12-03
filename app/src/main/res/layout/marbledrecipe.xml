@@ -89,22 +89,22 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/tansans"
+                android:id="@+id/bokbunja"
                 android:layout_width="match_parent"
                 android:layout_height="257dp"
                 android:layout_marginTop="50dp"
                 android:visibility="invisible"
-                app:srcCompat="@drawable/tansans" />
+                android:src="@drawable/bokbunja" />
 
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="110dp"
                 android:fontFamily="@font/nanumbarunpen_b"
-                android:text="탄산수"
-                android:textSize="36sp"
+                android:padding="20dp"
+                android:text="[복분자]\n\n전통적으로는 복분자딸기 열매를 증류식 소주에 담궈서 만들었다고 알려져 있다. 가정에서는 흔히 30% 담금주에 복분자와 설탕을 넣고 숙성하여 만든다. 물론 증류식 소주를 사용할 수도 있다. 맛이 상당히 달콤한 술에 해당한다. 양기를 북돋아주는 효능이 있다고 한다. 복분자라는 이름 자체가 요강을 뒤엎는 열매라는 뜻으로, 이 열매로 담근 술을 마시고 요강을 뒤엎을 정도로 양기가 강해졌다고 하여 붙은 이름이다. 차돌박이찜을 먹는 날은 사치를 부려도 좋다. 달콤한 맛을 가지고 있는 복분자를 맛있다고 마시고 있으면 어느새 볼이 빨개져 기분이 좋아져 있을 것이다."
                 android:textColor="#000000"
                 android:visibility="invisible" />
         </FrameLayout>

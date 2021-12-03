@@ -104,22 +104,22 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/tansans"
+                android:id="@+id/wine"
                 android:layout_width="match_parent"
                 android:layout_height="257dp"
                 android:layout_marginTop="50dp"
                 android:visibility="invisible"
-                app:srcCompat="@drawable/tansans" />
+                android:src="@drawable/wine" />
 
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="120dp"
                 android:fontFamily="@font/nanumbarunpen_b"
-                android:text="탄산수"
-                android:textSize="36sp"
+                android:padding="20dp"
+                android:text="[와인]\n\n영어 단어인 와인은 단독으로 표기할 때는 포도를 이용한 과실주를 나타내는 것이 일반적이지만, 발효주 중에서도 과일을 발효한 술을 뜻하기도 한다. 즉, 포도주 외에도 다른 과일주를 뜻하기도 하는데, 이때는 해당 작물이나 곡류의 이름을 함께 병기하여 블루베리 와인, 라즈베리 와인, 아이스베리 와인, 체리 와인, 감 와인 등으로 쓴다. 하지만 포도로 만든 술이 너무 유명하고 많다 보니 보통 저 단어를 한국어로 번역할 때에는 과일주보다는 포도주로 번역한다. 마늘향의 풍미가 느껴지는 올리브 오일로 만들어진 감바스는 여러 속재료들의 풍부한 맛을 와인이 잡아주면서 더욱 즐거운 식사를 할 수 있도록 도와줄 것이다."
                 android:textColor="#000000"
                 android:visibility="invisible" />
         </FrameLayout>

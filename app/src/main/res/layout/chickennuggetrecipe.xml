@@ -106,22 +106,22 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/tansans"
+                android:id="@+id/beer"
                 android:layout_width="match_parent"
                 android:layout_height="257dp"
                 android:layout_marginTop="50dp"
                 android:visibility="invisible"
-                app:srcCompat="@drawable/tansans" />
+                android:src="@drawable/beer" />
 
             <TextView
                 android:id="@+id/text1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="90dp"
                 android:fontFamily="@font/nanumbarunpen_b"
-                android:text="탄산수"
-                android:textSize="36sp"
+                android:padding="20dp"
+                android:text="[맥주]\n\n맥주는 원시시대부터 제조된 과실주와 미드라 불리우는 벌꿀술에 이어서 세계에서 오래된, 곡식을 이용한 발효주로는 가장 오래된 술로 알려져 있고, 가장 대중적인 알코올 음료 중 하나이기도 하다. 맥주는 알코올 성분이 적은 편이나 이산화 탄소와 홉의 쓴맛 성분을 함유하고 있어 소화를 촉진하고 이뇨작용을 돕는 효능이 있다. 마늘과 함꼐 볶은 닭똥집은 향도 식감도 훌륭하다, 짭짤하면서도 고소한 닭똥집을 먹다보면 저절로 맥주를 찾게 될 것이다."
                 android:textColor="#000000"
                 android:visibility="invisible" />
         </FrameLayout>
