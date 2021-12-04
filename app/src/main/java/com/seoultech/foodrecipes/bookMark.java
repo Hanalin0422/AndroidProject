@@ -7,6 +7,10 @@ public class bookMark {
 
     public bookMark(){}
 
+    public String getFoodImg(){return foodImg;}
+
+    public String getFoodName(){return foodName;}
+
     public bookMark(String foodID, String foodName, String foodImg) {
         this.foodName = foodName;
         this.foodID = foodID;

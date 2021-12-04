@@ -188,7 +188,9 @@ public class MainActivity extends AppCompatActivity{
         viewStored.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "아직 기능 안만듬", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "아직 기능 안만듬", Toast.LENGTH_SHORT).show();
+                Intent intent1 = new Intent(getApplicationContext(), StoreRecipe.class);
+                startActivity(intent1);
             }
         });
     }
