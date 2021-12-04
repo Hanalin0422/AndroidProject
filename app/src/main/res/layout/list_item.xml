@@ -32,6 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nanumbarunpen_b"
                 android:text="저장한 음식 레시피 이름 : "
                 android:textColor="#000000" />
 
@@ -40,9 +41,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
+                android:fontFamily="@font/nanumbarunpen_b"
                 android:text="음식 이름"
                 android:textColor="#000000" />
 
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

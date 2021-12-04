@@ -1,12 +1,17 @@
 package com.seoultech.foodrecipes;
 
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -28,6 +33,7 @@ public class StoreRecipe extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
     ImageButton arrow_back;
+    Button destory;
 
 
     @Override
@@ -41,6 +47,7 @@ public class StoreRecipe extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         arrayList = new ArrayList<>();
         arrow_back = findViewById(R.id.arrow_back);
+        destory = findViewById(R.id.destory);
 
 
 
@@ -63,10 +70,23 @@ public class StoreRecipe extends AppCompatActivity {
             }
         });
 
+        destory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                databaseReference.removeValue();
+//                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(intent);
+                finish();
+            }
+        });
+
+
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), new LinearLayoutManager(this).getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
         RecyclerDecoration_Height decoration_height = new RecyclerDecoration_Height(20);
         recyclerView.addItemDecoration(decoration_height);
+
+
 
         adapter = new CustomAdapter(arrayList, this);
         recyclerView.setAdapter(adapter);
