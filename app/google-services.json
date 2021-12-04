@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "339088124619",
+    "firebase_url": "https://androidproject-9def8-default-rtdb.firebaseio.com",
+    "project_id": "androidproject-9def8",
+    "storage_bucket": "androidproject-9def8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339088124619:android:4c72468981edfc56a4494e",
+        "android_client_info": {
+          "package_name": "com.seoultech.foodrecipes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339088124619-2jjvl8sfp4vb6ol57t3q10nk4ftb4v04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv779BrxmShuPbWKTLBsWET4HWpJ7ugqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339088124619-2jjvl8sfp4vb6ol57t3q10nk4ftb4v04.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

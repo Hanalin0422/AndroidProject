@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="71dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식 레시피" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/drink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpen_b"
+            android:text="음식과 어울리는 추천 음료" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/frame1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/goto_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/goto_home" />
+
+            <ImageView
+                android:id="@+id/carrotchicken"
+                android:layout_width="wrap_content"
+                android:layout_height="325dp"
+                app:srcCompat="@drawable/carrotchicken" />
+
+            <ImageButton
+                android:id="@+id/bookmark_add"
+                android:layout_width="wrap_content"
+                android:layout_height="53dp"
+                android:layout_marginLeft="350dp"
+                android:layout_marginTop="280dp"
+                app:srcCompat="@drawable/bookmark_add" />
+
+            <TextView
+                android:id="@+id/carrotchickenrecipe"
+                android:layout_width="369dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="300dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="당근 닭가슴살 스크램블\n\n재료 : 닭가슴살 1팩, 당근 1/3 등분, 브로콜리 1줌, 계란 2개, 소금, 올리브유
+                \n\n1. 삶아진 닭가슴살 1팩을 준비해서 작게 자른다.
+                \n2. 브로콜리/당근도 준비한뒤 작게 자른다.
+                \n3. 계란 2개에 소금을 넣어 잘 풀어준다.
+                \n4. 프라이팬에 올리브유를 넣고 닭가슴살/당근/브로콜리를 넣어 센불에 3~5분 달달 볶아준다.
+                \n5. 중약불로 불을 바꾼뒤 풀어둔 계란물을 고루 부어준다.
+                \n6. 계란물이 눌러붙지 않게 살살 섞어가면서 볶아주면 완성이다."
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/mart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="280dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:text="가까운 마트 찾기"
+                android:textSize="12sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/lemon"
+                android:layout_width="match_parent"
+                android:layout_height="257dp"
+                android:layout_marginTop="50dp"
+                android:visibility="invisible"
+                android:src="@drawable/lemon" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="90dp"
+                android:fontFamily="@font/nanumbarunpen_b"
+                android:padding="20dp"
+                android:text="[레모네이드]\n\n레몬, 물, 설탕으로 만드는 음료. 재료도 하나같이 구하기 쉽고 레시피도 매우 간단해서 만들기도 쉽다. 레몬의 지나친 신 맛이 설탕과 물로 중화되어 상큼한 맛으로 바뀌니 맛도 무난하게 좋은 편. 레몬이 흔한 서양권은 말할 것도 없고, 세계적으로도 널리 음용되는 음료이다. 흔히 말하는 에이드 계열 음료 중에서도 가장 보편적이다. 보통은 그냥 마시지만, 술을 타서 마시거나 요리에 이용하기도 한다. 닭가슴살과 스크램블을 더 맛있고 오래 즐기고 싶다면 상큼하고 톡 쏘는 레모네이드와 함께 즐기는 것이 최고의 방법이다."
+                android:textColor="#000000"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+    </FrameLayout>
+</LinearLayout>
