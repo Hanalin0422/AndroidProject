@@ -8,11 +8,14 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class milfyunabeRecipe extends AppCompatActivity {
     TabLayout tabLayout;
@@ -23,6 +26,8 @@ public class milfyunabeRecipe extends AppCompatActivity {
     TextView text;
     ImageView imageView;
 
+    public FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public DatabaseReference databaseReference = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -77,6 +82,18 @@ public class milfyunabeRecipe extends AppCompatActivity {
             }
         });
 
+        bookmark_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    writeData("m005","밀푀유나베","https://firebasestorage.googleapis.com/v0/b/androidproject-9def8.appspot.com/o/milfyunabe.jpg?alt=media&token=6ad0fd87-9bc0-4ee0-af4a-c1806a91c1db");
+                    Toast.makeText(getApplicationContext(),"저장되었습니다!", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    //Toast.makeText(getApplicationContext(), e.toString() ,Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
 
     }
@@ -95,5 +112,10 @@ public class milfyunabeRecipe extends AppCompatActivity {
                 text.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+
+    public void writeData(String foodID, String foodName, String foodImg){
+        bookMark bookmark = new bookMark(foodID, foodName, foodImg);
+        databaseReference.child("BookMark").child("Food_09").setValue(bookmark);
     }
 }

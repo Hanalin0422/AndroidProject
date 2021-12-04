@@ -8,11 +8,14 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class pumpkinRecipe extends AppCompatActivity {
     TabLayout tabLayout;
@@ -22,6 +25,9 @@ public class pumpkinRecipe extends AppCompatActivity {
     Button mart;
     TextView text;
     ImageView imageView;
+
+    public FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public DatabaseReference databaseReference = database.getReference();
 
 
     @Override
@@ -77,6 +83,19 @@ public class pumpkinRecipe extends AppCompatActivity {
             }
         });
 
+        bookmark_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    writeData("l005","애호박덮밥","https://firebasestorage.googleapis.com/v0/b/androidproject-9def8.appspot.com/o/pumpkin.jpg?alt=media&token=67e42d7d-7d74-445b-8592-9932cf940f29");
+                    Toast.makeText(getApplicationContext(),"저장되었습니다!", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    //Toast.makeText(getApplicationContext(), e.toString() ,Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
 
 
     }
@@ -95,5 +114,9 @@ public class pumpkinRecipe extends AppCompatActivity {
                 text.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+    public void writeData(String foodID, String foodName, String foodImg){
+        bookMark bookmark = new bookMark(foodID, foodName, foodImg);
+        databaseReference.child("BookMark").child("Food_11").setValue(bookmark);
     }
 }
