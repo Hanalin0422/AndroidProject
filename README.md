@@ -461,15 +461,39 @@ DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recycler
 >> 이런건 어떻게 하지?
 
 ### 3.1 앱 기능 개선점
-> 할 말이 진짜 많은 부분이다.
+할 말이 진짜 많은 부분이다. </br>
 1. 데이터베이스를 제대로 활용하지 못했다.
->> 데이터베이스에 레시피들을 전부 저장하고 앱에서 가져오는 형태를 취하고 레시피 저장은 인터넷이 연결이 안되도 볼수 있게 로컬 디바이스에 저장을 해야하는데 나는 그 반대로 기능을 구현해버렸다.
+> 데이터베이스에 레시피들을 전부 저장하고 앱에서 가져오는 형태를 취하고 레시피 저장은 인터넷이 연결이 안되도 볼수 있게 로컬 디바이스에 저장을 해야하는데 나는 그 반대로 기능을 구현해버렸다.
 >> 바꿔야 하는 부분이다.
+</br>
 
 2. 저장한 레시피 보는 부분 기능을 제대로 구현하지 못했다.
->> 리사이클러뷰로여주는 것까지는 어찌저찌 했는데 위에서 보여준 삭제버튼이 동작을 하지 못했다.
->> 정확히 말하면 화면에서는 삭제가 하나씩 잘 됬는데 데이터베이스에서 지워지지를 않아서 도르마무였다.
+> 리사이클러뷰로여주는 것까지는 어찌저찌 했는데 위에서 보여준 삭제버튼이 동작을 하지 못했다.
+> 정확히 말하면 화면에서는 삭제가 하나씩 잘 됬는데 데이터베이스에서 지워지지를 않아서 도르마무였다.
 그래서 일단 급한 대로 구현한 방법이 다음과 같이 그냥 한꺼번에 삭제하는 기능이었다.</br>
 <img src = "https://user-images.githubusercontent.com/78638427/144750424-cbcc68cf-95bd-47d3-b946-b89fee856a14.png" width = "270" height="480"></br>
+```
+        database = FirebaseDatabase.getInstance();
+       databaseReference = database.getReference("BookMark");
+
+
+            holder.destory.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    databaseReference.removeValue();
+
+                    arrayList.remove(position);
+                    notifyItemRemoved(position);
+                    notifyItemRangeChanged(position, arrayList.size());
+                }
+            });
+```
+> 여기서 어찌저찌하고 싶었는데 계속 데이터베이스 키를 못찾고 다 지워버리거나 아예 안지우거나 둘 중 하나이길래 이름도 delete였다가 destory로 바꿔버렸다.
+> 이거 삭제 기능만 어떻게 하는지 구글링을 8시간정도한거 같은데 리사이클러뷰에대한 기능 숙지가 완벽히 되어있지 않은 건지 파이어베이스를 다루는게 극초보수준이라 해결책을 보고도 넘어가버린 것인지...해결하지 못했다.
+
+</br>
+
+3. 2번과 연계된 부분으로 원래는 레시피를 리스트로 보여주고 그 중에 하나를 선택하면 해당하는 음식의 레시피 화면으로 다시 보내주는 기능을 구현하지 못했다.
+> 리사이클러뷰를 좀더 공부해보고 기능을 사용하는 법을 숙지하면 다시 한번 제대로 해보고 싶은 부분이다.
 
         
