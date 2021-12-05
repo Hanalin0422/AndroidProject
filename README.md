@@ -88,7 +88,7 @@ cabbage.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() 
 ***
 
 #### 2.3.3 CategoryChoice 화면
-테마는 총 3개로 잡았고 여기서 테마 중 원하는 거 하나 선택하면 그 테마에 맞는 음식을 랜덤으로 보여주는 화면으로 넘어가게 된다.
+테마는 총 3개로 잡았고 여기서 테마 중 원하는 거 하나 선택하면 그 테마에 맞는 음식을 랜덤으로 보여주는 화면으로 넘어가게 된다. </br>
 <img src = "https://user-images.githubusercontent.com/78638427/144747421-4a1448cc-76ef-4e92-97bc-70d40f3c663a.png" width = "270" height="480"></br>
 여기서 MainActivity에서 넘어온 ArrayList로 가지고 있는 레시피들을 필터링해서 랜덤으로 보여주어야 하는데 이 기능을 구현하는 것이 어려웠다. </br>
 처음에는 안드로이드스튜디오에 내장되어있는 SQLite를 사용하여 삽질 엄청 하다가 안되서 데이터베이스를 이용해서 기능을 구현하는 것은 포기하고 다른 방식을 선택했다. </br>
